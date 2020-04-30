@@ -2,10 +2,15 @@ function rpsGame(yourChoice) {
     console.log(yourChoice);
     var humanChoice, botChoice;
      humanChoice = yourChoice.id
-    botChoice = numberToChoice(randToRpsInt());
-    // alert(botChoice);
-    //results = decideWinner(humanChoice, botChoice); // (0,1) HUMAN LOST | BOT WON
-//message = finalMessage(results); // {'message'; 'You Won', 'color': 'green'}
+   
+     botChoice = numberToChoice(randToRpsInt());
+    console.log('Computer choice', botChoice);
+    
+    results = decideWinner(humanChoice, botChoice); // (0,1) HUMAN LOST | BOT WON
+    console.log(results);
+
+   message = finalMessage(results); // {'message'; 'You Won', 'color': 'green'}
+   console.log(message);
 //rpsFrontEnd(yourChoice.id, botChoice, message);
 
 }
