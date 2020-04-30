@@ -11,7 +11,7 @@ function rpsGame(yourChoice) {
 
    message = finalMessage(results); // {'message'; 'You Won', 'color': 'green'}
    console.log(message);
-//rpsFrontEnd(yourChoice.id, botChoice, message);
+rpsFrontEnd(yourChoice.id, botChoice, message);
 
 }
 
@@ -51,6 +51,12 @@ function numberToChoice(number) {
          'paper': document.getElementById('paper').src,
          'scissors': document.getElementById('scissors').src
      }
+
+     // let's remove all the images
+
+     document.getElementById('rock').remove();
+     document.getElementById('paper').remove();
+     document.getElementById('scissors').remove();
  }
 
 
