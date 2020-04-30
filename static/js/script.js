@@ -45,4 +45,12 @@ function numberToChoice(number) {
      }
  }
 
+ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
+     var ImagesDatabase = {
+         'rock': document.getElementById('rock').src,
+         'paper': document.getElementById('paper').src,
+         'scissors': document.getElementById('scissors').src
+     }
+ }
+
 
