@@ -4,8 +4,8 @@ function rpsGame(yourChoice) {
     // humanChoice = yourChoice.id
     botChoice = numberToChoice(randToRpsInt());
     // alert(botChoice);
-    //results = decideWinner(humanChoice, botChoice);
-//message = finalMessage(results); // you won
+    //results = decideWinner(humanChoice, botChoice); // (0,1) HUMAN LOST | BOT WON
+//message = finalMessage(results); // {'message'; 'You Won', 'color': 'green'}
 //rpsFrontEnd(yourChoice.id, botChoice, message);
 
 }
@@ -19,6 +19,15 @@ function numberToChoice(number) {
 }
  function decideWinner(yourChoice, computerChoice) {
      var rpsDatabase = {
-         
+         'rock': {'scissors': 1, 'rock': 0.5, 'paper': 0},
+         'paper': {'rock': 1, 'paper': 0.5, 'scissors': 0},
+         'scissors': {'paper': 1, 'scissors': 0.5, 'rock': 0}
      }
+
+     var yourChoice = rpsDatabase[yourChoice][computerChoice];
+     var computerChoice = rpsDatabase[computerChoice][yourChoice];
+
+     return [yourChoice, computerChoice];
  }
+
+
